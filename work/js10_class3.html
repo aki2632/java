@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("hello...");
+
+        //객체 생성시에 속성값 변경가능
+        class Person{
+            name = "kim";
+            age = 33;
+            //생성자 정의 - 1개만 정의 가능
+            constructor(name,age){
+                this.name = name;
+                this.age = age;
+            }
+        }
+        let p = new Person("lee",44);
+       
+        console.log(p);
+
+        class Student{
+            kor = 99;
+            eng = 88;
+            #math = 77;
+            //매개변수에 디폴트값설정이 가능하다.
+            constructor(kor=0,eng=0,math=0){
+                this.kor = kor;
+                this.eng = eng;
+                this.#math = math;
+            }
+        }
+        let st = new Student(11,22,33);//객체생성
+        console.log(st.kor + st.eng);
+        //생성자의 인자값이 없이 호출되면 매개변수는 undefined상태이다.
+        //undefined + undefined : NaN
+        console.log(st);
+       
+
+
+    </script>
+</head>
+<body>
+    <h1>class</h1>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("hello...");
+
+        //함수정의 방법 4가지
+        //인자(매개변수)의 유무
+        //리턴값의 유무
+
+        //test1,test2,test3,test4 라는 함수명들을 이용해서
+        //4가지 함수정의방법으로 구현하고 호출하세요
+
+        //1.인자x,리턴x
+        function test1(){
+            console.log("test1()....");
+        }
+        test1();
+
+        //2.인자O,리턴x
+        function test2(x) {
+            console.log("test2()",x);
+        }
+        test2("kim");
+
+        //3.인자x,리턴O
+        function test3() {
+            console.log("test3()...");
+            return 99;
+        }
+        let t3 = test3();
+        console.log(t3);
+
+        //4.인자O,리턴O
+        function test4(x=0,y=0) {
+            console.log("test4()",x,y);
+            return x+y;
+        }
+        let t4 = test4("kim","lee");
+        console.log(t4);
+        t4 = test4(11,22,33);
+        console.log(t4);
+
+    </script>
+</head>
+<body>
+    <h1>class</h1>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("hello...");
+
+        //클래스이름(식별자):첫글자가 영문 대문자사용권장.
+        class Person{
+            name = "kim";
+            //age;//undefined
+            age=33;
+        }
+        let p = new Person();
+        p.tel = "010";
+        p.name = "lee";
+        console.log(p);
+
+        class Student{
+            kor = 99;//public field(property,attribute)
+            eng = 88;
+            #math = 77;//private클래스 내부에서만 사용한정(속성은닉)
+            
+        }
+        let st = new Student();//객체생성
+        st.kor = 100;
+        console.log(st);
+        console.log(st.math);//undefined
+
+
+    </script>
+</head>
+<body>
+    <h1>class</h1>
+</body>
+</html>

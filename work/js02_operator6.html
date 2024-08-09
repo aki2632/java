@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("hello...");
+
+        //1. 조건연산자(3항연산자)
+        // 조건,비교연산 또는 참거짓결과값 ? 참일때값:거짓일때값
+
+        console.log(true?"탑승":"미탑승");
+        console.log(false?"탑승":"미탑승");
+
+        let bus_num = 100;
+        //let bus_num = prompt("몇번버스가 도착했나요?",100);
+        let result = bus_num==100?"탑승":"미탑승";
+        console.log(result);
+
+        window.onload = function(){
+            console.log("onload....");
+            document.querySelector("#result").innerHTML=result;
+        };
+
+        //중접된 3항연산가능
+        console.log(false ? "aaa": false ? "bbb": false ? "ccc":"ddd");
+
+
+        //오늘의 미션
+        //avg는 평균성적 변수
+        //3항연산자를 이용해서 A(100-90),B(89-80),C(79-70),D(70미만)
+        //구분해서 콘솔 출력하도록 프로그램을 작성하세요
+        let kor = prompt("국어점수를 입력하세요.",99);
+        let eng = prompt("영어점수를 입력하세요.",88);
+        let math = prompt("수학점수를 입력하세요.",77);
+        let total = parseInt(kor)+parseInt(eng)+parseInt(math);
+        console.log("total:",total);
+
+        let avg = total/3;
+        //let avg = prompt("평균점수를 입력하세요.",80);
+        console.log("typeof:",typeof(avg));
+        let grade = avg>=90?"A"
+                    :avg>=80?"B"
+                    :avg>=70?"C"
+                    :"D";
+
+        console.log(grade);
+
+        window.onload = function(){
+            console.log("onload...");
+            document.querySelector("#grade").innerHTML=grade;
+        };
+
+    </script>
+</head>
+<body>
+    <h1 id="result">operator연산자</h1>
+    <h1>등급: <span id="grade">A</span> </h1>
+</body>
+</html>

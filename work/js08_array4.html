@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("hello..");
+
+       //배열 생성방법 두가지
+       //1.[]이용하기
+       let arr = [];
+
+       //2.new Array() : 배열객체생성법 이용하기
+       let arr2 = new Array();//[]
+       console.log(arr2);
+
+       //생성자의 매개변수가 1개만 할당되면 배열의 길이를 정해준다.
+       arr2 = new Array(5);//[undefined,undefined,undefined,undefined,undefined]
+       console.log(arr2);
+       console.log("arr2.length:",arr2.length);
+
+       //생성자의 매개변수가 2개이상 할당되면 데이터들이된다.
+       arr2 = new Array(5,6,7,8);//[5,6,7,8]
+       console.log(arr2);
+       console.log("arr2.length:",arr2.length);
+
+
+       //배열의 임의 데이터를 채워주는 함수가 있다.
+       arr2 = new Array(5);
+       arr2.fill(0);
+       console.log(arr2);
+       console.log("arr2.length:",arr2.length);
+       arr2.fill(1);
+       console.log(arr2);
+       console.log("arr2.length:",arr2.length);
+
+       console.log(Array(10).fill('a'));
+
+       //배열끼리 결합하는 함수
+       let names1 = Array(3).fill("kim");
+       console.log(names1);
+       let names2 = Array(3).fill("lee");
+       console.log(names2);
+       console.log(names1.concat(names2));
+       // ['kim', 'kim', 'kim', 'lee', 'lee', 'lee']
+       
+
+       //배열의 모든요소(아이템)들을 하나의 문자열로 결합하는 함수
+        let total = names1.concat(names2);
+        console.log(total);
+        let data = "";
+        for (let i = 0; i < total.length; i++) {
+            data += total[i];
+        }
+        console.log(data);//kimkimkimleeleelee
+        console.log(total.join());//기본은 ,로 구분됨kim,kim,kim,lee,lee,lee
+        console.log(total.join(''));//kimkimkimleeleelee
+        console.log(total.join('+'));//kim+kim+kim+lee+lee+lee
+
+        //멀티배열
+        let arrs = new Array([11,22,33],[44,55,66]);
+        console.log(arrs);
+
+        arrs = new Array(Array(3).fill(33),Array(4).fill(44));
+        
+        //해당 아이템의 첫번째 발견되는 인덱스 반환
+        let ds = [11,22,33,44,55,33];
+        console.log(ds.indexOf(33));//2
+
+        //해당 아이템의 마지막 발견되는 인덱스 반환
+        console.log(ds.lastIndexOf(33));//5
+
+        console.log("===========");
+        let filter = ds.filter(function(item){
+            console.log(item);
+            return item%2==0;
+        });
+        console.log(filter);
+
+        console.log("===========");
+        let map = ds.map(function(item){
+            console.log(item);
+            return item*10;
+        });
+        console.log(map);
+
+    </script>
+</head>
+<body>
+    <h1>array</h1>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("hello...");
+
+        let avg = 99;
+        console.log(avg>=90 ? "A":"B");
+
+        if (avg>=90) {
+            console.log("90이상...avg:",avg);
+            let eng = 100;
+        }
+        //console.log("eng:",eng);//error 로컬변수 참조불능
+
+        {//코드블럭의 유무에 따라서 전역변수과 로컬변수로 변환
+            let math = 88;
+            console.log("math:",math);
+        }
+        //console.log("math:",math);//error 로컬변수 참조불능
+
+        var name = "kim";
+        console.log(name);
+        
+        var name = "lee";
+        console.log(name);
+        
+        {
+            let name = "han";
+            console.log(name);
+        }
+        console.log(name);
+        if(avg > 50){
+            console.log(name);
+            let name2 = "yang";
+            console.log(name2);
+        }
+
+        let kor = 99;
+        if (kor==100) {
+            console.log("백점...");
+        } else {
+            console.log("백점이 아님...");
+        }
+
+
+    </script>
+</head>
+<body>
+    <h1>if~else</h1>
+</body>
+</html>

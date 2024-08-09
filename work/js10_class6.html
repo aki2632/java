@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("hello...");
+
+        //클래스간의 상속구현
+        //기존객체가 가진 속성을 상속구현(extends)으로 처리가능.
+
+        class Person{
+            name = "Person kim";
+            constructor(){
+                console.log("Person()...");
+            }
+            sleep(){
+                console.log("Person sleep()...");
+            }
+        }
+
+        class Student extends Person{
+            //name = "Student name";
+            kor = 99;
+            constructor(){
+                super();//Person의 생성자를 호출(반드시 코딩)
+                console.log("Student()...");
+            }
+            //sleep(){
+            //    console.log("Student sleep()...");
+            //}
+            study(){
+                console.log("study()...",this.name);
+                //console.log("study()...",super.name);//아직 미완문법
+            }
+        }
+        let st = new Student();
+        console.log(st.name);
+        st.sleep();
+        st.study();
+
+        class My extends Student{
+
+        }
+        let my = new My();
+        my.sleep();
+
+    </script>
+</head>
+<body>
+    <h1>class</h1>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("hello...");
+        //switch case를 활용한 간단한 미션
+        let su = 9;
+        //su에 할당된값이 1-10 이면 "1~10"이라고 로그출력
+        //11-20 이면 "11~20"이라고 로그출력
+        //두개의 범위내의 수가아니면 "범위를 벗어난 수"라고 로그출력
+        
+        switch (su) {
+            case 1: case 2: case 3:case 4:case 5:
+            case 6:case 7:case 8:case 9:
+            case 10:
+                console.log("1~10...");
+                break;
+            case 11: case 12: case 13:case 14:case 15:
+            case 16:case 17:case 18:case 19:
+            case 20:
+                console.log("11~20...");
+                break;
+            default:
+                console.log("범위를 벗어난 수");
+                break;
+        }
+
+        let avg = 66;
+        console.log(parseInt(avg/10));
+        switch (parseInt(avg/10)) {
+            case 10:
+            case 9:
+                console.log("A");
+                break;
+            case 8:
+                console.log("B");
+                break;
+            case 7:
+                console.log("C");
+                break;
+            default:
+                console.log("D");
+                break;
+        }
+
+
+        let x = 4;
+        console.log(x%2==0);//even
+        if (x%2==0) {
+            console.log("if...even");
+        }else{
+            console.log("if...odd");
+        }
+
+        switch (x%2) {
+            case 0:
+                console.log("switch...even");
+                break;
+        
+            default:
+                console.log("switch...odd");
+                break;
+        }
+
+    </script>
+</head>
+<body>
+    <h1>switch~case</h1>
+
+</body>
+</html>

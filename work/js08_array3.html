@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("hello..");
+
+        //멀티배열-배열안에 배열이 올 수 있다.다차원배열
+        let arrs = [[11,22,33],[44,55,66,77]];//2차원배열
+        console.log(arrs);
+        console.log("arrs.length:",arrs.length);
+        console.log(arrs[0]);
+        console.log("arrs[0].length:",arrs[0].length);
+        console.log(arrs[1]);
+        console.log("arrs[1].length:",arrs[1].length);
+        
+        console.log(arrs[0][0]);
+        console.log(arrs[0][1]);
+        console.log(arrs[0][2]);
+
+        for (let i = 0; i < arrs[0].length; i++) {
+            console.log(arrs[0][i]);
+        }
+
+        for (let i = 0; i < arrs[1].length; i++) {
+            console.log(arrs[1][i]);
+        }
+
+        console.log("================");
+        //중첩 일반for로 한번에 출력하기
+        for (let x = 0; x < arrs.length; x++) {
+            for (let i = 0; i < arrs[x].length; i++) {
+                console.log(arrs[x][i]);
+            }
+        }
+        console.log("================");
+
+        //중첩 for in 으로 한번에 출력하기
+        for (const x in arrs) {
+            for (const i in arrs[x]) {
+                console.log(arrs[x][i]);
+            }
+        }
+
+        console.log("================");
+        //중첩 forEach함수로 한번에 출력하기
+        arrs.forEach(function(arr){
+            arr.forEach(function(item){
+                console.log(item);
+            });
+        });
+
+
+    </script>
+</head>
+<body>
+    <h1>array</h1>
+</body>
+</html>

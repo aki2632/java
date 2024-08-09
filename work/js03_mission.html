@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("성적처리 미션");
+        //form태그로 입력한 국어,영어,수학 점수를 각각 변수에 입력받습니다.
+        //kor,eng,math,total,avg,grade
+        window.onload = function(){
+            console.log("onload");
+            document.querySelector("#btn").onclick = function(){
+                console.log("onclick");
+                let kor = document.querySelector("#i_kor").value;
+                console.log(kor);
+                let eng = document.querySelector("#i_eng").value;
+                console.log(eng);
+                let math = document.querySelector("#i_math").value;
+                console.log(math);
+
+                document.querySelector("#h_kor").innerHTML = "국어:"+kor;
+                document.querySelector("#h_eng").innerHTML = "영어:"+eng;
+                document.querySelector("#h_math").innerHTML = "수학:"+math;
+
+                let total = parseInt(kor) + parseInt(eng) + parseInt(math);
+                console.log(total);
+
+                document.querySelector("#h_total").innerHTML = "총점:"+total;
+
+                let avg = total/3;
+                console.log(avg);
+                document.querySelector("#h_avg").innerHTML = "평균:"+avg;
+
+                let grade = avg>=90?"A"
+                    :avg>=80?"B"
+                    :avg>=70?"C"
+                    :"D";
+                console.log(grade);
+                document.querySelector("#h_grade").innerHTML = "평균:"+grade;
+            };
+        };
+    </script>
+</head>
+<body>
+    <h1>성적처리 미션</h1>
+    <h1 id="h_kor">국어:99</h1>
+    <h1 id="h_eng">영어:99</h1>
+    <h1 id="h_math">수학:99</h1>
+    <h1 id="h_total">총점:297</h1>
+    <h1 id="h_avg">평균:99.0</h1>
+    <h1 id="h_grade">등급:A</h1>
+    
+    <input type="number" id="i_kor" value="99">
+    <input type="number" id="i_eng" value="88">
+    <input type="number" id="i_math" value="77">
+    <button id="btn">계산하기</button>
+
+   
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("hello..");
+
+        //배열(array) - 하나의 변수에 하나의데이터를 넣어서
+        //              사용하던것에서 여러개의 데이터를 넣을수 있도록 하는 개념
+        //인덱스와 길이를 기본으로 사용한다.
+
+        let a0 = 10;
+        let a1 = 20;
+        let a2 = 30;
+
+        let arr = [11,22,33,44,55,66,77,88];
+        console.log(arr);
+        console.log(arr[0]);
+        console.log(arr[1]);
+        console.log(arr[2]);
+
+        for (let i = 0; i < arr.length; i++) {
+            console.log(arr[i]);
+        }
+
+        let sum = arr[0] + arr[1] + arr[2];
+        console.log("sum:",sum);
+        //for반복을 이용해서 배열의 합계를 계산하고 출력하세요
+
+        sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+        console.log("sum:",sum);
+        console.log("==============");
+
+        arr = [11,22,"kim"];
+        for (let i = 0; i < arr.length; i++) {
+            console.log(arr[i]);
+        }
+        console.log("==============");
+        arr = [11,3.14,"kim",[88,99],{name:"lee"},function(){}];
+        for (let i = 0; i < arr.length; i++) {
+            console.log(arr[i]);
+        }
+
+        let names = ['kim','lee','yang'];
+        console.log(names[3]);
+        names[3] = "han";
+        names[13] = "han13";
+        for (let i = 0; i < names.length; i++) {
+            console.log(names[i]);
+        }
+        console.log("names.length:",names.length);
+
+        console.log("==============");
+
+        let datas = [];
+        //비어있는 배열에 임의의 정수100개할당하세요
+        //할당후 내용과 길이를 출력하세요
+        for (let i = 0; i < 100; i++) {
+            //console.log(i);
+            datas[i] = i
+        }
+        console.log(datas);
+        console.log("datas.length:",datas.length);
+        for (let i = 0; i < datas.length; i++) {
+            console.log(datas[i]);
+        }
+
+       
+        let names2 = ['kim','lee','yang'];
+        console.log(names2);
+        names2[0] = 'kim2';
+        console.log(names2);
+
+        //배열의 길이는 가변적이고, 마지막인덱스+1의 값을 갖는다.
+        names2[names2.length] = 'han1';
+        console.log(names2);
+        names2[names2.length] = 'han2';
+        console.log(names2);
+
+        //배열의 맨끝에 데이터를 추가해주는 함수
+        names2.push("choi1");
+        console.log(names2);
+        names2.push("choi2");
+        console.log(names2);
+
+    </script>
+</head>
+<body>
+    <h1>array</h1>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("hello...");
+        //예: 1~10까지의 합을 출력하는프로그램
+        //for반복문을 이용하여 구현하세요
+        
+
+        window.onload = function(){
+            console.log("onload...");
+
+            document.querySelector("#btn").onclick = function(){
+                console.log("onclick...");
+
+                let su1 = document.querySelector("#su1").value;
+                console.log("su1...",su1);
+                let su2 = document.querySelector("#su2").value;
+                console.log("su2...",su2);
+
+                let sum = 0;
+                for (let i = parseInt(su1); i <= parseInt(su2); i++) {
+                    console.log(i);
+                    sum += i;
+                }
+                console.log(sum);
+
+                document.querySelector("#result").innerHTML = "결과:"+sum;
+            };
+
+        };
+
+    </script>
+</head>
+<body>
+    <h1>주어진 시작정수~끝정수의 합</h1>
+    <h1 id="result">결과:0</h1>
+    시작정수:<input type="number" id="su1" value="1"> ~ 
+    끝정수:<input type="number" id="su2" value="10"> 
+    <button id="btn">계산</button> 
+
+</body>
+</html>

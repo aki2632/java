@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("hello...");
+
+        let name = "kim";
+        let age = 33;
+
+        //객체 : object
+        //여러개의 데이터들을 순서로 묶는것(배열)이아닌
+        //키,값으로 묶어서 관리가능하도록 하는 것이 객체.
+        let data = ["kim",33];
+        let info = {name:"kim",age:33,arr:[11,22,33]};
+        console.log(info);
+        console.log(info["name"], info["age"],info["arr"]);
+        console.log(info.name,info.age,info.arr);
+        for(const i in info.arr){
+            console.log(info.arr[i]);
+        }
+
+        for(const key in info){
+            console.log(info[key]);
+        }
+
+    </script>
+</head>
+<body>
+    <h1>object</h1>
+</body>
+</html>

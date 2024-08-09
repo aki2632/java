@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("hello..");
+        //배열의 이름들을 화면에 출력하도록하세요.
+       let names = ["kim","lee","han"];
+       let sus = [11,22,33,44];
+        window.onload = function(){
+            console.log("onload..");
+            document.querySelector("#h01").innerHTML = "0:"+names[0];
+            document.querySelector("#h02").innerHTML = "1:"+names[1];
+            document.querySelector("#h03").innerHTML = "2:"+names[2];
+            /* 반복문 사용할것
+                <p>11</p>
+                <p>22</p>
+                <p>33</p>
+                <p>44</p>
+            */
+            let ps = ``;
+            for(const i in sus){
+                ps += `<p>${sus[i]}</p>`;
+            }
+            document.querySelector("#d01").innerHTML = ps;
+        };
+    </script>
+</head>
+<body>
+    <h1>array</h1>
+    <div id="d01">
+    </div>
+    <h3 id="h01">0:aaa</h3>
+    <h3 id="h02">1:bbb</h3>
+    <h3 id="h03">2:ccc</h3>
+</body>
+</html>

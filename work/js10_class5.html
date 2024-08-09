@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("hello...");
+
+        //일반 메소드(기능) 정의가능.
+        
+        class Student{
+            name = "kim";
+            #age = 33; 
+            constructor(){
+                //field값 초기화
+            }
+            study(){
+                console.log("study()....");
+            }
+            study2(a){
+                console.log("study2(a)",a);
+                //return;
+            }
+            study3(){
+                console.log("study3()");
+                return 100;
+            }
+            study4(a,b){
+                console.log("study4(a,b)",a,b);
+                return 1000;
+            }
+
+            //static메소드-객체생성없이 클래스이름으로 접근가능한메소드
+            static sleep(){
+                console.log("slee()...");
+            }
+            
+        }
+        let st = new Student();
+        console.log(st);
+        st.study();//함수호출(콜)
+        st.study2(11);//함수호출(콜)
+        console.log(st.study3());
+        console.log(st.study4(11,22));
+        Student.sleep();
+    </script>
+</head>
+<body>
+    <h1>class</h1>
+</body>
+</html>

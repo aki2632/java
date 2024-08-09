@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("hello..");
+
+        let arr = [];
+        console.log(arr);
+        console.log("arr.length:"+arr.length);
+
+        for (let i = 0; i < 5; i++) {
+            arr.push(i);
+        }
+        console.log(arr);
+        console.log("arr.length:"+arr.length);
+
+        //맨끝데이터를 제거하는 함수
+        console.log(arr.pop());
+        console.log(arr);
+        console.log("arr.length:"+arr.length);
+        console.log(arr.pop());
+        console.log(arr);
+        console.log("arr.length:"+arr.length);
+
+        //맨앞에 데이터를 추가하는 함수
+        //0번인덱스에 데이터를 할당하고 나머지는 뒤로 밀리는 구현
+        arr.unshift(11);
+        arr.unshift(111);
+        arr.unshift(1111);
+        console.log(arr);
+        console.log("arr.length:"+arr.length);
+
+        //0번인덱스 데이터를 뽑아내는 함수
+        //나머지 데이터들은 다시 0번부터 배치
+        arr.shift();
+        arr.shift();
+        console.log(arr);
+        console.log("arr.length:"+arr.length);
+
+        arr[10] = 99;
+        console.log(arr);
+        console.log("arr.length:"+arr.length);
+
+        for (let i = 0; i < arr.length; i++) {
+            console.log(arr[i]);
+        }
+
+        console.log("==============");
+        //undefined는 출력안함.
+        for (const i in arr) {
+            console.log(arr[i]);
+        }
+
+        console.log("==============");
+        //undefined는 출력안함.
+        arr.forEach(function(item,i){
+            console.log(item,arr[i],i);
+        });
+
+    </script>
+</head>
+<body>
+    <h1>array</h1>
+</body>
+</html>

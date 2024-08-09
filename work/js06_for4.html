@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("hello...");
+        
+        //반복문 중첩,multi for
+
+        //0-9출력하는 구문을 3번 반복하세요.
+        for (let x = 0; x < 3; x++) {
+            //console.log("x:",x);
+            for (let i = 0; i < 10; i++) {
+                console.log("x:",x,"i:",i);
+            }
+            console.log("=======");
+        }
+        console.log("===========================");
+        //9*9단을 출력하는 반복문을 작성하세요.
+        //2*1=2,,,,
+        for (let x = 2; x < 10; x++) {
+            //console.log("x:",x);
+            for (let i = 1; i < 10; i++) {
+                //console.log(`${x}*${i}=${x*i}`);
+                console.log(x+"*"+i+"="+x*i);
+            }
+            console.log("=======");
+        }
+
+       console.log("프로그램종료");
+
+    </script>
+</head>
+<body>
+    <h1>for</h1>
+</body>
+</html>

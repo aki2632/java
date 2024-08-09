@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("hello...");
+        //break,continue 를 이용한 반복문 제어
+        
+        //반복문 블럭내부에서 5까지만 출력되도록 제어해보자.
+       for (let i = 0; i < 10; i++) {
+            console.log(i);
+            
+            if(i==5){
+                break;//if블럭을 제외한 가장가까운 블럭탈출
+            } 
+       }
+
+       //반복문 블럭내부에서 5만빼고 출력되도록 제어해보자.
+       for (let i = 0; i < 10; i++) {
+            if(i==5){
+                continue;//if블럭을 제외한 가장가까운 블럭끝으로 바로이동
+            } 
+            console.log(i);
+       }
+
+       console.log("프로그램종료");
+
+    </script>
+</head>
+<body>
+    <h1>for</h1>
+</body>
+</html>

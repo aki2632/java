@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("hello");
+
+        //for 반복처럼 사용가능
+        let i=0;
+        while(i<10){
+            console.log(i);
+            i++;
+        }
+
+        //break를 사용해서 반복문 제어
+        let i2=0;
+        while(true){
+            console.log(i2);
+            i2++;
+            if(i2==5)break;
+        }
+
+        while(false){
+            x = prompt("종료하시려면 x입력","x");
+            console.log("x:",x);
+            if(x==='x')break;
+        }
+
+        //do~while반복문이란?
+        //while문의 조건식이 거짓이더라도 일단 
+        //실행문을 우선실행하도록 하는 반복문
+        do{
+            x = prompt("종료하시려면 x입력","x");
+            console.log("x:",x);
+            if(x==='x')break;
+        }while(false);
+
+    </script>
+</head>
+<body>
+    <h1>while</h1>
+</body>
+</html>

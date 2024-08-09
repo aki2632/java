@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("hello...");
+
+        
+        //for반복문 : 횟수,길이등이 정해졌을때 사용
+        //for(변수초기화;조건식;증감연산)
+        for(let i = 0 ; i < 10 ; i++ ){
+            console.log("kim....",i);
+        }
+        
+        //97~122출력하는 반복문을 작성하세요
+        for(let i=97;i<122+1;i++){
+            console.log(i, String.fromCharCode(i));
+        }
+
+        //65~90출력하는 반복문을 작성하세요
+        for (let i = 65; i < 90+1; i++) {
+            console.log(i,String.fromCharCode(i));
+            
+        }
+
+        //0-9출력하는데 짝수만 출력하세요
+        for (let i = 0; i < 10; i+=2) {
+            console.log(i);
+        }
+        for (let i = 0; i < 10; i++) {
+            if(i%2==0){
+                console.log(i);
+            }
+        }
+
+        //0-9출력하는데 3의배수만 출력하세요
+        for (let i = 0; i < 10; i+=3) {
+            console.log(i);
+        }
+        for (let i = 0; i < 10; i++) {
+            if(i%3==0){
+                console.log(i);
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <h1>for</h1>
+</body>
+</html>

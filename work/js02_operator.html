@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("hello...");
+
+        let su1 = 10;
+        let su2 = 3;
+
+        //1.산술연산자 : 연산항목이 2항연산자
+        console.log(su1 + su2);
+        console.log(su1 - su2);
+        console.log(su1 * su2);
+        console.log(su1 / su2);
+        let res = su1 / su2;//3.3333
+        console.log(parseInt(res));//3
+        console.log(res.toFixed(3));//소숫점 관리함수
+        console.log(su1 % su2);//나눈 나머지
+        console.log(su1 ** su2);//뒷수만큼 제곱
+        //연산순서도 기본수학과 같다
+        console.log(1+2*3-4);
+        let res2 = (1+2)*(3-4);
+
+        //2.증감연산자(1씩증가,1씩감소) ++,-- : 단항연산자
+        let x = 10;
+        ++x;
+        x++;
+        ++x;
+        console.log(x);
+
+        let y = ++x;
+        console.log(x,y);
+        y = x++;
+        console.log(x,y);
+
+
+
+
+    </script>
+</head>
+<body>
+    <h1>operator연산자</h1>
+</body>
+</html>

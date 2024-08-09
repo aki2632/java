@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("hello...");
+
+        
+        //함수호출시 인자타입은 모든데이터(리터럴)타입가능
+        function test(x){
+            console.log(x);
+        }
+        test();//undefined
+        test(11);//number
+        test("kim");//string
+        test([11,22,33]);
+        test({name:"kim",age:33});
+        test(function(){});
+
+        console.log("===============");
+        //함수리턴시 리턴타입은 모든데이터(리터럴)타입가능
+        function test2(){
+            //return;//undefined,생략가능
+            //return 11;
+            //return "kim";
+            //return [11,22,33];
+            //return {name:"kim",age:33}; 
+            return function(){};
+        }
+        console.log(test2());
+
+        //동일이름함수가 있을경우 최종정의된 함수만 호출됨.
+        function test2(){
+            //return;//undefined,생략가능
+            //return 11;
+            //return "kim";
+            //return [11,22,33];
+            return {name:"kim",age:33}; 
+            //return function(){};
+        }
+        console.log(test2());
+    </script>
+</head>
+<body>
+    <h1>class</h1>
+</body>
+</html>

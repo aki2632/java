@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("hello...");
+
+        //private field 값 획득 및 변경을 위한 메소드 정의가능.
+
+        class Car{
+            #price = 0;
+            #model = "noModel";
+            #driver_name = "noName";
+            constructor(){
+                console.log("Car()....");
+            }
+            set price(price){
+                this.#price = price;
+            }
+            get price(){
+                return this.#price;
+            }
+            set model(model){
+                this.#model = model;
+            }
+            get model(){
+                return this.#model;
+            }
+            set driver_name(driver_name){
+                this.#driver_name = driver_name;
+            }
+            get driver_name(){
+                return this.#driver_name;
+            }
+        }
+        let car = new Car();
+        car.price = 1000;
+        car.model = "OOOO";
+        car.driver_name = "kim";
+        console.log(car);
+        console.log(car.model,car.price,car.driver_name);
+
+
+    </script>
+</head>
+<body>
+    <h1>class</h1>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("hello...");
+
+        //반복문이 자주사용되는 타입 >>> 배열
+        let arr = [11,22,33,44,55,66,77,88];
+        console.log("arr.length:",arr.length);
+        console.log(arr[0]);
+        console.log(arr[1]);
+        console.log(arr[2]);
+        console.log(arr[3]);
+        for (let i = 0; i < arr.length; i++) {
+            console.log(arr[i]);
+        }
+
+        console.log("==================");
+
+        //배열(객체)처리용 반복문 추가로 있다.for ... in
+        for (const i in arr) {
+            console.log(arr[i]);
+        }
+        console.log("==================");
+        //배열처리용 함수가 있다. forEach(function(){})
+        arr.forEach(function(item,index){
+            console.log(item,index,arr[index]);
+        });
+
+    </script>
+</head>
+<body>
+    <h1>for</h1>
+</body>
+</html>

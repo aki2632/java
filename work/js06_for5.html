@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("hello...");
+        
+        //중첩반복문사용시
+        //내부반복문에서 외부반복문을 탈출하고자 한다.
+
+        //반복문에 라벨(label)을 부착해서 반복문제어가능
+
+        first:for (let x = 0; x < 3; x++) {
+            for (let i = 0; i < 10; i++) {
+                console.log(i);
+                if(i==5)break first;
+            }
+        }
+
+       console.log("프로그램종료");
+
+    </script>
+</head>
+<body>
+    <h1>for</h1>
+</body>
+</html>

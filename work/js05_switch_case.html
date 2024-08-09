@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("hello...");
+        //if블럭과 유사하나 크다,작다,이상,이하처리 비교연산자 사용불가
+        let x = 9.9;//정수,실수,문자열 가능
+        switch(x){
+            case 10:
+                console.log("열....");
+                break;//if블럭을 제외한 가장가까운 블럭탈출
+            case 9.9:
+                console.log("구....");
+                break;
+            default:
+                console.log("기타...");
+                break;//생략가능
+        }
+
+        let key  = "pW";
+        switch (key) {
+            case "name":
+                console.log("name....");
+                break;
+            case "id":
+                console.log("id....");
+                break;
+            case "pw":
+                console.log("pw....");
+                break;
+            default:
+                console.log("잘못입력....");
+                break;
+        }
+
+    </script>
+</head>
+<body>
+    <h1>switch~case</h1>
+
+</body>
+</html>
